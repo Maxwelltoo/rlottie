@@ -95,10 +95,10 @@ if (NOT APPLE AND NOT WIN32)
                           )
 endif()
 
-if (LOTTIE_MODULE)
-    # for dlopen, dlsym and dlclose dependancy
-    target_link_libraries(rlottie PRIVATE ${CMAKE_DL_LIBS})
-endif()
+# if (LOTTIE_MODULE)
+#     # for dlopen, dlsym and dlclose dependancy
+#     target_link_libraries(rlottie PRIVATE ${CMAKE_DL_LIBS})
+# endif()
 
 if (NOT LOTTIE_ASAN)
     if(APPLE)
@@ -137,7 +137,7 @@ endif (NOT LIB_INSTALL_DIR)
 #declare source and include files
 add_subdirectory(inc)
 add_subdirectory(src)
-add_subdirectory(example)
+# add_subdirectory(example)
 
 if (LOTTIE_TEST)
     enable_testing()

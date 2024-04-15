@@ -385,7 +385,7 @@ struct VRleTask {
             SW_FT_Stroker_Set(stroker, outRef.ftWidth, outRef.ftCap,
                               outRef.ftJoin, outRef.ftMiterLimit);
             SW_FT_Stroker_ParseOutline(stroker, &outRef.ft);
-            SW_FT_Stroker_GetCounts(stroker, &points, &contors);
+            SW_FT_Stroker_GetCounts(stroker, (SW_FT_UInt*)&points, (SW_FT_UInt*)&contors);
 
             outRef.grow(points, contors);
 
